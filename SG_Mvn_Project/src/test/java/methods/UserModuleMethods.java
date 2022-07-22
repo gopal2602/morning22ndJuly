@@ -61,9 +61,9 @@ public class UserModuleMethods extends DriverScript implements ObjectLocators{
 			appInd.waitForElement(oBrowser, obj_DeleteUser_Btn, "Clickable", "", waitTimeout);
 			Thread.sleep(2000);
 			appInd.clickObject(oBrowser, obj_DeleteUser_Btn);
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			oBrowser.switchTo().alert().accept();
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			
 			if(appInd.verifyElementNotPresent(oBrowser, By.xpath("//div[@class='name']/span[text()='"+userName+"']"))) {
 				reports.writeReport(oBrowser, "Pass", "The user '"+userName+"' was deleted successful");
